@@ -148,6 +148,7 @@ not_chocolate <- filter(candy_df, !chocolate) %>%
 t.test(chocolate, not_chocolate, 
          alternative = "greater")
 ```
+
 This test tells us our p value (we'll talk about those more later) is suppppppeer small so that yeah, 60 is different enough from 42 given the amount of data we gave this test. 
 
 ### Conclusion 

@@ -108,7 +108,7 @@ Let's start with the missing data. To replace these `-99` and `...` we can use t
 
 ```{r}
 un_df <- naniar::replace_with_na_all(un_df,
-                                     condition = ~.x %in% c(-99, "-99", "..."))
+                                     condition = ~.x %in% c(-99, "-99", "...", ".../..."))
 ```
 
 Let's split the `life_expectancy_at_birth_females_males_years` column up into two columns so we can more appropriately deal with these data. To do this we can use a handy function called `tidyr::separate()`. Call the new resulting columns `life_expectancy_at_birth_females` and `life_expectancy_at_birth_males` by specifying this with the `into` argument.
